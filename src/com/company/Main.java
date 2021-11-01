@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
 
-    private static ArrayList<Album> albums = new ArrayList<Album>();
+    private static List<Album> albums = new ArrayList<Album>();
 
     public static void main(String[] args) {
         Album album = new Album("Spring","Daniel");
@@ -44,7 +44,7 @@ public class Main {
         play(playList);
 
     }
-    private static void play(LinkedList<Song> playList){
+    private static void play(List<Song> playList){
         ListIterator<Song> listIterator = playList.listIterator();
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
@@ -138,7 +138,7 @@ public class Main {
                 "4 - list songs in the playlist\n"+
                 "5 - print available actions.");
     }
-    public static void printList(LinkedList<Song> playList){
+    public static void printList(List<Song> playList){
         Iterator<Song> iterator = playList.iterator();
         System.out.println("=============================");
         while (iterator.hasNext()){
